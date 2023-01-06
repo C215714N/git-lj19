@@ -1,0 +1,14 @@
+# archivos
+*.temp
+*.tmp
+*.swf
+*.txt
+*.log
+
+# carpetas
+temp/
+tmp/
+docs/
+logs/
+refs/
+node_modules/
