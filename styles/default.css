@@ -14,7 +14,16 @@
         margin: 0;
     }
     /* Cabecera */
-
+    header{
+        min-height: min(100vh, 640px);
+        display: grid;
+        align-content: center;
+        text-align: center;
+        font-size: min(3rem, calc(2vw + .8rem));
+        color: #eee;
+        background: linear-gradient(#c36, #448);
+        text-shadow: 0 0 .5rem #eee;
+    }
     /* Navegacion */
 
     /* Contenido */
