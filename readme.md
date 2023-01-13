@@ -22,6 +22,12 @@ Area de trabajo que corresponde a la carpeta donde se inicializo el repositorio 
 
 Area de control de cambios que se utiliza para realizar las capturas de codigo __(SNAPSHOT)__ y agregar los archivos a los que vamos a realizarle seguimiento. Corresponde a la etapa intermedia antes de registrar los cambios de manera definitiva.
 
+* __git status:__ muestra el estado de los archivos respecto al INDEX
+* __git diff:__ compara el working directory con el staging area
+* __git blame `<file>`:__ muestra los autores de cada linea del archivo
+* __git restore --staged `<file>`:__ elimina la ultima captura realizada
+* __git rm --cached `<file>`:__ remueve el archivo y sus capturas del INDEX
+
 ### Repository (Local / Remote)
 
 Repositorio o almacen de cambios, corresponde al lugar donde se guardan las capturas de codigo realizadas mediante commits en archivos (BLOB) y a las que podemos acceder a traves del historial de confirmaciones, facilitando la navegacion.
