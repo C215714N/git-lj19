@@ -31,3 +31,9 @@ Area de control de cambios que se utiliza para realizar las capturas de codigo _
 ### Repository (Local / Remote)
 
 Repositorio o almacen de cambios, corresponde al lugar donde se guardan las capturas de codigo realizadas mediante commits en archivos (BLOB) y a las que podemos acceder a traves del historial de confirmaciones, facilitando la navegacion.
+
+* __git commit:__ confirma las capturas realizadas previamente
+* __git log:__ muestra el registro de confirmaciones
+* __git push:__ envia al repositorio remoto los cambios realizados
+* __git fetch:__ obtiene el historial del repositorio remoto
+* __git pull:__ obtiene y combina los cambios remotos en el repositorio local
