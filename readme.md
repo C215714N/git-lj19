@@ -12,6 +12,12 @@ Cuando trabajamos con git, esta herramienta permite la gestion de los cambios de
 
 Area de trabajo que corresponde a la carpeta donde se inicializo el repositorio de git. Rara vez vamos a utilizar la linea de comandos mas alla de la creacion del repositorio y se utiliza normalmente para crear, editar y eliminar los archivos del proyecto.
 
+* __git init:__ inicializa un repositorio de git
+* __mkdir `<name>`:__ crea un directorio (carpeta)
+* __touch `<name>`:__ crea el archivo especificado
+* __cd `<path>`:__ abre el directorio seleccionado
+* __rm -rf .git:__ elimina el repositorio de git
+
 ### Staging Area (Index)
 
 Area de control de cambios que se utiliza para realizar las capturas de codigo __(SNAPSHOT)__ y agregar los archivos a los que vamos a realizarle seguimiento. Corresponde a la etapa intermedia antes de registrar los cambios de manera definitiva.
