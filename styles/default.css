@@ -14,13 +14,34 @@
         margin: 0;
     }
     /* Cabecera */
-
+    header{
+        min-height: min(100vh, 640px);
+        display: grid;
+        align-content: center;
+        text-align: center;
+        font-size: min(3rem, calc(2vw + .8rem));
+        color: #eee;
+        background: linear-gradient(#c36, #448);
+        text-shadow: 0 0 .5rem #eee;
+    }
     /* Navegacion */
 
     /* Contenido */
 
     /* Pie de Pagina */
-
+    .copy{
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+        color: #eee;
+        text-shadow: 0 0 .5rem #333;
+        background: linear-gradient(to right, #c36, #448);
+        opacity: .8;
+        transition: all .5s ease-in;
+    }
+    .copy:hover{
+        opacity: 1;
+    }
 /* Small Devices (Smartphones) */
 
 /* Medium Devices (Tablets) */
