@@ -10,8 +10,18 @@
     h1,
     h2,
     h3,
-    header p{
+    header p,
+    .menu{
         margin: 0;
+    }
+    .menu{
+        padding: 0;
+    }
+    .menu{
+        list-style: none;
+    }
+    nav a{
+        text-decoration: none;
     }
     /* Cabecera */
     header{
@@ -25,7 +35,53 @@
         text-shadow: 0 0 .5rem #eee;
     }
     /* Navegacion */
-
+    nav{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+        background: linear-gradient(#f80, #000);
+    }
+    nav a{
+        display: block;
+        padding: .25rem;
+        color: #eee;
+        text-shadow: 0 0 .25rem #333;
+        transition: all .5s ease;;
+    }
+    .btn{
+        border-radius: .25rem;
+        border: 1px solid #eee;
+        padding: .25rem .5rem;
+        color: #eee;
+        background-color: transparent;
+    }
+    .btn:hover{
+        color: #000;
+        background-color: #eee;
+    }
+    .icon-open::before{
+        content: '\2630';
+    }
+    .icon-close::before{
+        content: '\00D7';
+    }
+    .menu{
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .5s linear;
+    }
+    .menu.active{
+        max-height: 100vh;
+    }
+    .menu a:hover{
+        text-shadow: 0 0 .5rem #eee;
+    }
     /* Contenido */
 
     /* Pie de Pagina */
@@ -45,9 +101,24 @@
 /* Small Devices (Smartphones) */
 
 /* Medium Devices (Tablets) */
-
+@media screen and (min-width: 768px){
+    nav .btn{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        width: auto;
+        max-height: 640px;
+        gap: .5rem;
+    }
+}
 /* Large Devices (Laptops) */
 
 /* Extra Large (Desktop) */
 
 /* Extra Extra Large (Smart TV) */
+@media screen and (min-width: 1400px){
+    nav{
+        padding: 1rem calc(50vw - 660px);
+    }
+}
