@@ -64,6 +64,12 @@
                     Apuntador estatico que se corresponde con el commit en donde haya sido creado, se utiliza para el versionado del proyecto y facilita la navegacion hacia puntos concretos dentro del historial de confirmaciones. Normalmente se escriben de la siguiente manera: <em>v0.1.2</em> donde el primer valor corresponde a la version principal, el segundo al numero de compilacion o caracteristica y el ultimo al numero de correccion o revision.
                 </p>
             </article>
+            <article>
+                <h3>STASH</h3>
+                <p>
+                    Apuntador de zona temporal de cambios que se utiliza para apilar todo trabajo que no amerita un commit (WIP: Work in Progress), pero que debemos almacenar temporalmente para no perder las modificaciones realizadas. Esto se debe a que GIT no permite cambiar entre ramas si existe algun cambio sin confirmar en el working directory. Una vez finalizada la operacion, podemos recuperar el contenido realizando una operacion merge a la inversa.
+                </p>
+            </article>
         </section>
     </main>
     <!-- Pie -->
