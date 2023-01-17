@@ -87,6 +87,8 @@
     /* Tabla colaboradores */
     .colabs{
         margin: 1rem auto;
+        width: 50%;
+        text-align: left;
     }
     .colabs caption,
     .colabs th,
