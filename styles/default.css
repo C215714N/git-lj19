@@ -83,7 +83,9 @@
         text-shadow: 0 0 .5rem #eee;
     }
     /* Contenido */
-
+    .colabs{
+        width: 50%;
+    }
     /* Pie de Pagina */
     .copy{
         margin: 0;
