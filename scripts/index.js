@@ -15,9 +15,9 @@ function toggle(object){
     btn.classList.replace(val[1], val[0])
 }
 // Eventos
-menuBtn.addEventListener('click', (e) => toggle({
-    btn: e.target,
+menuBtn.onclick = toggle( {
+    btn: menuBtn,
     target: menuList,
     className: cN,
     val: ['icon-open','icon-close']
-} ) )
+} )
