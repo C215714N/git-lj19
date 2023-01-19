@@ -51,24 +51,55 @@
                 <p>
                     Apuntador Movil que indica donde se encuentra actualmente el usuario dentro del historial de confirmaciones. Se utiliza como referencia relativa para la mayoria de los comandos que requieran manipular los commits y por ajemplo algunas de las expresiones correspondientes pueden ser <em>HEAD~3</em> o <em>HEAD^^^</em>, si necesito apuntar hacia el commit ancestro que se encuentra a 3 nodos del actual.
                 </p>
+                <ul class="commands">
+                    <li><strong>git diff HEAD^^^</strong> compara el working directory con el commit de hace 3 confirmaciones</li>
+                    <li><strong>git checkout HEAD~3</strong> mueve el apuntador hacia el commit ancestro de hace 3 confirmaciones</li>
+                    <li><strong>git cherry-pick HEAD~2^</strong> utiliza los cambios del commit de hace 3 confirmaciones</li>
+                    <li><strong>git reset HEAD^^~1</strong> elimina los commits hasta el ancestro de hace a 3 confirmaciones</li>
+                    <li><strong>git revert HEAD~1^^</strong> crea un commit deshaciendo los cambios del de hace 3 confirmaciones</li>
+                </ul>
             </article>
             <article>
                 <h3>BRANCH</h3>
                 <p>
                     Apuntador dinamico que se corresponde con el ultimo commit de la rama en la que nos encontramos. Se utiliza como referencia para facilitar la navegacion dentro del historial de confirmaciones. Ademas funciona para probar caracteristicas o resolver inconvenientes con respecto al codigo del proyecto, sin comprometer la historia principal. Los cambios realizados en las mismas pueden ser integrados o no.
                 </p>
+                <ul class="commands">
+                    <li><strong>git branch</strong> Lista las ramas locales</li>
+                    <li><strong>git branch &lt;name></strong> Crea una rama a partir del commit actual</li>
+                    <li><strong>git branch -mv &lt;name></strong> Cambia el nombre de la rama actual</li>
+                    <li><strong>git branch -d &lt;branch></strong> elimina la rama solamente si fue integrada (segura)</li>
+                    <li><strong>git branch -D &lt;branch></strong> elimina la rama sin aunque no este integrada (forzada)</li>
+                    <li><strong>git push &lt;remote> &lt;branch></strong> envia los cambios locales a la rama remota</li>
+                    <li><strong>git push -d &lt;remote> &lt;branch></strong> elimina la rama del repositorio remoto</li>
+                </ul>
             </article>
             <article>
                 <h3>TAG</h3>
                 <p>
                     Apuntador estatico que se corresponde con el commit en donde haya sido creado, se utiliza para el versionado del proyecto y facilita la navegacion hacia puntos concretos dentro del historial de confirmaciones. Normalmente se escriben de la siguiente manera: <em>v0.1.2</em> donde el primer valor corresponde a la version principal, el segundo al numero de compilacion o caracteristica y el ultimo al numero de correccion o revision.
                 </p>
+                <ul class="commands">
+                    <li><strong>git tag</strong> Lista las etiquetas existentes</li>
+                    <li><strong>git tag &lt;name></strong> asigna una etiqueta al commit actual</li>
+                    <li><strong>git tag &lt;new> &lt;old></strong> asigna una nueva etiqueta en el mismo commit que otra</li>
+                    <li><strong>git tag -d &lt;tag></strong> elimina la etiqueta seleccionada</li>
+                    <li><strong>git push &lt;remote> --tags</strong> envia al repositorio remoto las etiquetas locales</li>
+                    <li><strong>git push -d &lt;remote> &lt;tag></strong> elimina la etiqueta del repositorio remoto</li>
+                </ul>
             </article>
             <article>
                 <h3>STASH</h3>
                 <p>
                     Apuntador de zona temporal de cambios que se utiliza para apilar todo trabajo que no amerita un commit (WIP: Work in Progress), pero que debemos almacenar temporalmente para no perder las modificaciones realizadas. Esto se debe a que GIT no permite cambiar entre ramas si existe algun cambio sin confirmar en el working directory. Una vez finalizada la operacion, podemos recuperar el contenido realizando una operacion merge a la inversa.
                 </p>
+                <ul class="commands">
+                    <li><strong>git stash</strong> Almacena los cambios del INDEX en la zona temporal de cambios</li>
+                    <li><strong>git stash list</strong> Lista los cambios almacenados en la zona temporal</li>
+                    <li><strong>git stash apply stash@{n}</strong> Aplica los cambios de la zona temporal en el working directory</li>
+                    <li><strong>git stash drop stash@{n}</strong> Elimina la referencia de la zona temporal de cambios</li>
+                    <li><strong>git stash pop stash@{n}</strong> Aplica los cambios y elimina el stash de la zona temporal</li>
+                </ul>
             </article>
         </section>
     </main>

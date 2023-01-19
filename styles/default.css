@@ -17,6 +17,7 @@
     .menu{
         padding: 0;
     }
+    .commands,
     .menu{
         list-style: none;
     }
@@ -84,7 +85,15 @@
         text-shadow: 0 0 .5rem #eee;
     }
     /* Contenido */
-
+    .commands{
+        max-width: 720px;
+        margin: 2rem auto;
+        border-left: .25rem solid #f80;
+        padding: 1rem;
+        line-height: 1.5;
+        box-shadow: -.25rem .25rem .5rem #3338;
+        background-color:#eee;
+    }
     /* Repositorios */
     .social{
         display: flex;
