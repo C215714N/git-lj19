@@ -173,3 +173,17 @@
         padding: 1rem calc(50vw - 660px);
     }
 }
+/* Redes Sociales */
+    .social2{
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+    }
+    .social2 a{
+        border-radius: .5rem;
+        padding: .5rem;
+        color: #eee;
+    }
+    .social2 a:hover{
+    background-color: rgb(189, 178, 178);
+    }
