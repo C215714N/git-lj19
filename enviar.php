@@ -3,7 +3,7 @@ $nombre = $_POST['nombre'];
 $correo = $_POST['correo'];
 $correo = $_POST['tel'];
 $mensaje = $_POST['mensaje'];
-$para = "cristiangodoy2011@gmail.com";
+$para = "alumnos@educacionit.com";
 $asunto = "Contacto desde página web";
 $cuerpo = "<h1>Contacto</h1><img src='https://i.ytimg.com/vi/cFnH5nhSMcI/maxresdefault.jpg' style='width:30%'><br><strong>Los datos recibidos son:</strong><br><p>Nombre: " . $nombre . "</p><p>Correo: " . $correo . "</p><p>Mensaje: " . $mensaje . "</p>";
 $cabecera = "From:" . $para . "\r\n";
