@@ -85,6 +85,10 @@
         text-shadow: 0 0 .5rem #eee;
     }
     /* Contenido */
+    main{
+        margin: 1rem auto;
+        padding: .5rem;
+    }
     .commands{
         max-width: 720px;
         margin: 2rem auto;
@@ -150,7 +154,11 @@
         opacity: 1;
     }
 /* Small Devices (Smartphones) */
-
+@media screen and (min-width: 576px){
+    main{
+        max-width: 540px;
+    }
+}
 /* Medium Devices (Tablets) */
 @media screen and (min-width: 768px){
     nav .btn{
@@ -162,15 +170,29 @@
         max-height: 640px;
         gap: .5rem;
     }
+    main{
+        max-width: 720px;
+    }
 }
 /* Large Devices (Laptops) */
-
+@media screen and (min-width: 992px){
+    main{
+        max-width: 960px;
+    }
+}
 /* Extra Large (Desktop) */
-
+@media screen and (min-width: 1200px){
+    main{
+        max-width: 1140px;
+    }
+}
 /* Extra Extra Large (Smart TV) */
 @media screen and (min-width: 1400px){
     nav{
         padding: 1rem calc(50vw - 660px);
+    }
+    main{
+        max-width: 1320px;
     }
 }
 /* Redes Sociales */
