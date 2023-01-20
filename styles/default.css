@@ -14,10 +14,12 @@
     .menu{
         margin: 0;
     }
+    .list-unstyled,
     .menu{
         padding: 0;
     }
     .commands,
+    .list-unstyled,
     .menu{
         list-style: none;
     }
@@ -89,6 +91,29 @@
         margin: 1rem auto;
         padding: .5rem;
     }
+    /* Disposicion */
+    .grid{
+        display: grid;
+    }
+    .flex{
+        display: flex;
+    }
+    .auto{
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size)), 1fr));
+        gap: .5rem;
+    }
+    .auto > * {
+        flex: 1 0 min(100%, var(--size))
+    }
+    .small{
+        --size: 180px;
+    }
+    .medium{
+        --size: 360px;
+    }
+    .large{
+        --size: 540px ;
+    }
     .commands{
         max-width: 720px;
         margin: 2rem auto;
@@ -97,6 +122,26 @@
         line-height: 1.5;
         box-shadow: -.25rem .25rem .5rem #3338;
         background-color:#eee;
+    }
+    .card{
+        border-radius: .5rem;
+        padding: 3rem 1rem;
+        box-shadow: 0 0 .5rem #ccc;
+        font-size: min(calc(2vw + 1rem), 5rem);
+        color: #eee;
+        background-color: #3338;
+        text-transform: uppercase;
+        text-align: center;
+        transition: all .5s ease;
+    }
+    .card:nth-child(even):hover{
+        background-color: #336;
+    }
+    .card:nth-child(odd):hover{
+        background-color: #633;
+    }
+    .card:nth-child(3n + 1):hover{
+        background-color: #363;
     }
     /* Repositorios */
     .social{
